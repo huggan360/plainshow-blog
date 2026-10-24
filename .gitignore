@@ -1,0 +1,75 @@
+# --- Videos (ignore all video files) ---
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Or ignore a whole folder if you keep them in one place:
+videos/
+media/
+
+# --- Common web junk / build stuff (add what fits your stack) ---
+node_modules/
+dist/
+build/
+*.log
+*.tmp
+*.swp
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Ignore PHP session files
+app/sessions/
+public/sand/sandgame
+
+# Local/server generated data
+
+# User/media uploads
+public/assets/vids/
+public/assets/profile_pictures/
+
+# LaTeX workspace/temp output - handled locally on server
+# LaTeX app source is tracked, but generated/dependency files are ignored
+public/latex/temp/
+public/latex/vendor/
+public/latex/node_modules/
+public/latex/.codex
+public/latex/.codex/
+public/latex/**/*.log
+public/latex/**/*.aux
+public/latex/**/*.out
+public/latex/**/*.toc
+public/latex/**/*.pdf
+
+# Nested sandbox projects have their own git repos
+public/sand/
+
+# Codex local state
+.codex/
+**/.codex/
+
+# PlainShow sign-in secrets
+/config/plainshow.php
+
+# Installed by composer
+/vendor/
+/public/ui
+/app/sessions/*
+!/app/sessions/.gitkeep
+/config/database.php
+
+# Dev symlinks to the live uploads
+/public/assets/vids
+/public/assets/profile_pictures
+/public/sand
+
+# Picture thumbnails
+/app/cache/
+/config/notify.php
+/config/key.json
+/config/widgets.php

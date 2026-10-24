@@ -1,0 +1,15 @@
+{
+    "id": "blog",
+    "name": "Blog",
+    "description": "Posts, galleries and stories.",
+    "icon": "bx-news",
+    "version": "2.4.0",
+    "url": "{url}",
+    "api": "{url}/api/v1",
+    "health": "{url}/",
+    "update": {
+        "repository": "https://github.com/huggan360/plainshow-blog.git",
+        "shared": ["config", "app/sessions", "app/cache", "app/storage"],
+        "steps": ["composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-req=php"]
+    }
+}

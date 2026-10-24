@@ -1,0 +1,11 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Rewrite all non-php URLs to their .php counterparts
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Force HTTPS for all requests
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

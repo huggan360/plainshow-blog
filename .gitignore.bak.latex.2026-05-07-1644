@@ -1,0 +1,46 @@
+# --- Videos (ignore all video files) ---
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Or ignore a whole folder if you keep them in one place:
+videos/
+media/
+
+# --- Common web junk / build stuff (add what fits your stack) ---
+node_modules/
+dist/
+build/
+*.log
+*.tmp
+*.swp
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Ignore PHP session files
+app/sessions/
+public/sand/sandgame
+
+# Local/server generated data
+app/sessions/
+*.log
+
+# User/media uploads
+public/assets/vids/
+public/assets/profile_pictures/
+
+# LaTeX workspace/temp output - handled locally on server
+public/latex/
+
+# Nested sandbox projects have their own git repos
+public/sand/
+
+# Codex local state
+.codex/
+**/.codex/

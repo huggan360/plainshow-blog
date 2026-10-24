@@ -1,0 +1,27 @@
+# 1️⃣ Redirect all HTTP traffic to HTTPS
+RewriteEngine On
+
+# The first PlainShow's blog moved from app2 to blog.plainshow.se; keep old links working.
+RewriteCond %{HTTP_HOST} ^app2\.plainshow\.se$ [NC]
+RewriteRule ^(.*)$ https://blog.plainshow.se/$1 [R=301,L,NE]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Old addresses: the sign-in page and Split moved; the old form handler is gone.
+RewriteRule ^login(\.php)?$ /signin [R=301,L]
+RewriteRule ^split(\.php|/.*)?$ split-moved.php [L,QSA]
+RewriteRule ^logic(\.php)?$ - [G,L]
+
+# Blog API: every /api/v1/... request goes to one entry point.
+RewriteRule ^api/v1(/.*)?$ api/v1/index.php [L,QSA]
+
+# 2️⃣ Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+# 4️⃣ Optional: Prevent access to .htaccess itself
+<Files ".htaccess">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
