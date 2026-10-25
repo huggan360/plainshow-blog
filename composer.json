@@ -3,7 +3,7 @@
     "description": "PlainShow Blog: posts, galleries, stories and the Week of Bali trips.",
     "require": {
         "twig/twig": "^3.11",
-        "plainshow/kit": "^1.7"
+        "plainshow/kit": "^1.13"
     },
     "autoload": {
         "psr-4": {

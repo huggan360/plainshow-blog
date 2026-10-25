@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.8.0
+
+- The blog follows the theme colour chosen in the dashboard (kit 1.13), with Bree Serif titles and dark grey text in the light theme.
+
 ## v2.7.0
 
 - Every address comes from the platform file (kit 1.12), so the blog runs on any domain; Split's parts of the overview only show when Split is installed.
